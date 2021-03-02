@@ -4,6 +4,34 @@
 // };
 
 window.onload = () => {
+  loadScriptAsync();
+  myFunction();
+};
+/*This function will load script and call the callback once the script has loaded*/
+function loadScriptAsync(scriptSrc, callback) {
+  if (typeof callback !== "function") {
+    throw new Error("Not a valid callback for async script load");
+  }
+  var script = document.createElement("script");
+  script.onload = callback;
+  script.src = scriptSrc;
+  document.head.appendChild(script);
+}
+
+/* This is the part where you call the above defined function and "call back" your code which gets executed after the script has loaded */
+loadScriptAsync(
+  "https://www.googletagmanager.com/gtag/js?id=G-KVWZZZL2XD",
+  function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-KVWZZZL2XD");
+    // gtag("config", "G-KVWZZZL2XD", { anonymize_ip: true });
+  }
+);
+function myFunction() {
   (function (i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;
     (i[r] =
@@ -26,10 +54,7 @@ window.onload = () => {
 
   ga("create", "G-KVWZZZL2XD", "auto");
   ga("send", "pageview");
-  myFunction();
-};
 
-function myFunction() {
   var a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   var n;
   var r = [];
