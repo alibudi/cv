@@ -6,6 +6,28 @@
 window.onload = () => {
   myFunction();
 };
+(function (i, s, o, g, r, a, m) {
+  i["GoogleAnalyticsObject"] = r;
+  (i[r] =
+    i[r] ||
+    function () {
+      (i[r].q = i[r].q || []).push(arguments);
+    }),
+    (i[r].l = 1 * new Date());
+  (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m);
+})(
+  window,
+  document,
+  "script",
+  "https://www.google-analytics.com/analytics.js",
+  "ga"
+);
+
+ga("create", "G-KVWZZZL2XD", "auto");
+ga("send", "pageview");
 function myFunction() {
   var a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   var n;
@@ -126,7 +148,7 @@ function myFunction() {
   xhr.open("GET", "https://muslima.hops.id/wp-json/wp/v2/posts");
 
   xhr.send();
-  
+
   document.getElementById("12345").innerHTML =
-    '    <div class="section-title"><div> <span></span><h5>Baca Lainnya</h5> </div> </div> <br><div class="row"><div class="col-lg-3">  <li style="list-style-type: none;"><div class="al-row"><div id="img1-1" class="al-thumb"> </div> <div class="al-info content_center"><span id="text1-1"> </span> </div> </div>    </li> <li style="list-style-type: none;"> <div class="al-row">    <div id="img1-2" class="al-thumb">     </div>  <div class="al-info content_center"> <span id="text1-2"></span> </div> </div></li><li style="list-style-type: none;"> <div class="al-row"> <div id="img1-3" class="al-thumb"> </div> <div class="al-info content_center"><span id="text1-3"> </span></div> </div> </li> </div><div class="col-lg-3">  <li style="list-style-type: none;"><div class="al-row"><div id="img1-4" class="al-thumb">  </div>        <div class="al-info content_center"><span id="text1-4"></span></div></div></li> <li style="list-style-type: none;"><div class="al-row"> <div id="img1-5" class="al-thumb"> </div> <div class="al-info content_center"><span id="text1-5"> </span> </div> </div> </li> <li style="list-style-type: none;"><div class="al-row"> <div id="img1-6" class="al-thumb"></div><div class="al-info content_center"> <span id="text1-6">  </span>  </div></div></li></div></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-KVWZZZL2XD"></script><script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }    gtag("js", new Date());    gtag("config", "G-KVWZZZL2XD");</script>';
+    '    <div class="section-title"><div> <span></span><h5>Baca Lainnya</h5> </div> </div> <br><div class="row"><div class="col-lg-3">  <li style="list-style-type: none;"><div class="al-row"><div id="img1-1" class="al-thumb"> </div> <div class="al-info content_center"><span id="text1-1"> </span> </div> </div>    </li> <li style="list-style-type: none;"> <div class="al-row">    <div id="img1-2" class="al-thumb">     </div>  <div class="al-info content_center"> <span id="text1-2"></span> </div> </div></li><li style="list-style-type: none;"> <div class="al-row"> <div id="img1-3" class="al-thumb"> </div> <div class="al-info content_center"><span id="text1-3"> </span></div> </div> </li> </div><div class="col-lg-3">  <li style="list-style-type: none;"><div class="al-row"><div id="img1-4" class="al-thumb">  </div>        <div class="al-info content_center"><span id="text1-4"></span></div></div></li> <li style="list-style-type: none;"><div class="al-row"> <div id="img1-5" class="al-thumb"> </div> <div class="al-info content_center"><span id="text1-5"> </span> </div> </div> </li> <li style="list-style-type: none;"><div class="al-row"> <div id="img1-6" class="al-thumb"></div><div class="al-info content_center"> <span id="text1-6">  </span>  </div></div></li></div></div>';
 }
