@@ -4,8 +4,9 @@
 // };
 
 window.onload = () => {
-  loadScriptAsync();
   myFunction();
+  loadScriptAsync();
+  
 };
 /*This function will load script and call the callback once the script has loaded*/
 function loadScriptAsync(scriptSrc, callback) {
